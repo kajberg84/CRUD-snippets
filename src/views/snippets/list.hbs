@@ -1,0 +1,33 @@
+<!-- views/snippets/list.hbs -->
+
+<div class="">
+    <div class="container">
+        <h1>Snippet List</h1>
+    </div>
+</div>
+
+  <p>
+    {{#if viewData.user}}
+    Hello {{viewData.user.username}}
+    {{else}}
+    Hello Guest
+    {{/if}}
+  </p>
+
+<table>
+  {{#if viewData.snippetsList.length}}
+  {{#each viewData.snippetsList}}
+  <tr>
+    <td>
+      {{@index}} <a href="./snippet/{{this._id}}"> {{this.title}}</a>
+    </td>
+  </tr>
+  {{/each}}
+  {{else}}
+  <tr>
+    <td>
+      No snippets to display.
+    </td>
+  </tr>
+  {{/if}}
+</table>

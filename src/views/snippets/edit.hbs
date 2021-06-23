@@ -1,0 +1,34 @@
+<!-- views/snippets/edit.hbs -->
+
+<div class="">
+    <div class="container">
+        <h1>EDIT snippet</h1>
+    </div>
+</div>
+
+<a href="./snippet/">Back</a>
+<form method="POST" action="./snippet/{{viewData.snippet._id}}">
+<label for="title">Title:</label>
+<input name="title" type="text" value="{{viewData.snippet.title}}" placeholder="Title here">
+
+<p>
+  <label for="content">Text:</label>
+  <textarea name="content" type="text" placeholder="Snippet text here" rows="4" cols="20" wrap="hard">{{viewData.snippet.content}}</textarea>
+  </p>
+  <p>
+  <button type="submit">Save Snippet</button>
+  </p>
+
+
+</form>
+
+<p>
+<form method="POST" action="./snippet/delete/{{viewData.snippet._id}}">
+ <button type="submit">Delete Snippet</button>
+</form>
+</p>
+
+
+<p>Title max 30 Characters.</p>
+<p>Text max 3000 Characters.</p>
+

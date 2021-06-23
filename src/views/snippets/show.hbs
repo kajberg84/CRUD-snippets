@@ -1,0 +1,16 @@
+<!-- views/snippets/show.hbs -->
+
+<div class="   ">
+    <div class="container">
+        <h1>Show Snippet</h1>
+    </div>
+</div>
+<a href="./snippet/">Back</a>
+
+<form method="POST" action="./snippet/{{viewData.snippet.id}}">
+
+<p class="text-white bg-dark"style = 'width:50%;'>Title:  {{viewData.snippet.title}}  </p>
+
+<p class="text-white bg-dark" style = 'word-break: break-all;
+    white-space: normal; width:50%;'>Text:  {{viewData.snippet.content}}  </p>
+

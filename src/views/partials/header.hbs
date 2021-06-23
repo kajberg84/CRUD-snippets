@@ -1,0 +1,32 @@
+<!-- views/partials/header.hbs -->
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="./snippet">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./user/signup">Create User</a>
+        </li>
+        {{#if viewData.user}}
+             <li class="nav-item">
+          <a class="nav-link" href="./snippet/0">Create/edit snippet</a>
+        </li>
+
+        <li class="nav-item">
+          <form action="./user/delete/{{viewData.user._id}}" method="POST" role="form">
+            <button type="submit" class="btn btn-link text-danger" >Delete me</button>
+          </form>
+        </li>
+
+          <li class="nav-item"><a class="nav-link"  href="./session/logout">Log out</a></li>
+        {{else}}
+          <li class="nav-item">
+        <a class="nav-link" href="./session/login">Login</a>
+      </li>
+  {{/if}}
+</ul>
+</nav>
+</header>
+

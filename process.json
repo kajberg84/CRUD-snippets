@@ -1,0 +1,12 @@
+{
+  "name" : "snippetapp:5003",
+  "script" : "src/server.js",
+  "env_production" : {
+    "NODE_ENV": "production",
+    "MY_PORT": "5003",
+    "DB_CONNECTION_STRING": "mongodb+srv://KajBerg:k655xloUmFLhMRVX@database.s4eat.mongodb.net/database?retryWrites=true&w=majority",
+    "BASE_URL": "/snippets-app/",
+    "SESSION_NAME": "AssignmentMongoDb",
+    "SESSION_SECRET": "ILoveMy2babies"
+  }
+}
